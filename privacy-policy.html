@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Rock & Root Initiative</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/Rock&Root-white.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #f7f3ec;
+        --warm-white: #fdfaf5;
+        --earth: #8b6f47;
+        --forest: #2e4a3a;
+        --gold: #c4963a;
+        --charcoal: #2a2520;
+        --text: #3a322a;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Jost", sans-serif;
+        background: var(--warm-white);
+        color: var(--text);
+        line-height: 1.8;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 18px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(253, 250, 245, 0.98);
+        border-bottom: 1px solid rgba(139, 111, 71, 0.15);
+      }
+
+      .nav-logo img {
+        height: 40px;
+        width: 100px;
+        object-fit: contain;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 36px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .nav-links a:hover {
+        color: var(--forest);
+      }
+
+      /* ── CONTENT ── */
+      .legal-header {
+        background: var(--forest);
+        padding: 160px 24px 80px;
+        text-align: center;
+      }
+
+      .legal-header h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        color: var(--cream);
+        margin-bottom: 16px;
+      }
+
+      .legal-header p {
+        color: var(--gold);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      .legal-content {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 0 24px;
+      }
+
+      .legal-content h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2rem;
+        color: var(--forest);
+        margin: 40px 0 16px;
+      }
+
+      .legal-content h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        color: var(--charcoal);
+        margin: 30px 0 12px;
+      }
+
+      .legal-content p {
+        margin-bottom: 16px;
+        color: rgba(58, 50, 42, 0.85);
+      }
+
+      .legal-content ul {
+        margin-bottom: 24px;
+        padding-left: 24px;
+      }
+
+      .legal-content li {
+        margin-bottom: 8px;
+        color: rgba(58, 50, 42, 0.85);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--charcoal);
+        color: var(--cream);
+        padding: 80px 60px 40px;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 60px;
+        border-bottom: 1px solid rgba(196, 150, 58, 0.15);
+        padding-bottom: 60px;
+      }
+
+      .footer-brand p {
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(200, 192, 181, 0.7);
+        max-width: 320px;
+      }
+
+      .footer-logo img {
+        height: 72px;
+        width: 120px;
+        margin-bottom: 16px;
+        object-fit: contain;
+      }
+
+      .footer-col h5 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.2rem;
+        color: var(--gold);
+        margin-bottom: 24px;
+      }
+
+      .footer-col a {
+        display: block;
+        color: rgba(200, 192, 181, 0.7);
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+
+      .footer-col a:hover {
+        color: var(--cream);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: rgba(200, 192, 181, 0.5);
+        letter-spacing: 0.05em;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 16px 24px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="./index.html" class="nav-logo">
+        <img src="./assets/Rock&Root.svg" alt="Rock & Root Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html#about">About</a></li>
+        <li><a href="./index.html#programs">Programs</a></li>
+        <li><a href="./index.html#events">Events</a></li>
+        <li><a href="./index.html#resources">Resources</a></li>
+        <li>
+          <a href="./index.html#get-involved" class="nav-cta">Get Involved</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="legal-header">
+      <h1>Privacy Policy</h1>
+      <p>How we handle your data</p>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="legal-content">
+      <h2>Introduction</h2>
+      <p>Welcome to the Rock & Root Initiative Privacy Policy.</p>
+      <p>
+        Rock & Root Initiative respects your privacy and is committed to
+        protecting your personal data. This privacy policy will inform you as to
+        how we look after your personal data when you visit our website
+        (regardless of where you visit it from), sign up for our events, or
+        volunteer with us.
+      </p>
+
+      <h3>Controller</h3>
+      <p>
+        Rock & Root Initiative is the controller and responsible for your
+        personal data (collectively referred to as "we", "us" or "our" in this
+        privacy policy).
+      </p>
+
+      <h2>The Data We Collect About You</h2>
+      <p>
+        Personal data, or personal information, means any information about an
+        individual from which that person can be identified.
+      </p>
+      <p>
+        We may collect, use, store and transfer different kinds of personal data
+        about you which we have grouped together as follows:
+      </p>
+      <ul>
+        <li>
+          <strong>Identity Data</strong> includes first name, last name, title,
+          and marital status (e.g., when registering for marriage-focused
+          events).
+        </li>
+        <li>
+          <strong>Contact Data</strong> includes email address and telephone
+          numbers.
+        </li>
+        <li>
+          <strong>Financial Data</strong> includes payment processing details
+          when you make a gift or register for a paid conference (processed
+          securely by third-party providers).
+        </li>
+        <li>
+          <strong>Transaction Data</strong> includes details about event
+          registrations and donations.
+        </li>
+        <li>
+          <strong>Technical Data</strong> includes internet protocol (IP)
+          address, browser type and version, time zone setting, and operating
+          system used to access this website.
+        </li>
+        <li>
+          <strong>Usage Data</strong> includes information about how you use our
+          website, resources, and event pages.
+        </li>
+      </ul>
+
+      <h2>How Is Your Personal Data Collected?</h2>
+      <p>
+        We use different methods to collect data from and about you including
+        through:
+      </p>
+      <ul>
+        <li>
+          <strong>Direct interactions.</strong> You may give us your Identity
+          and Contact Data by filling in forms (such as our "Get Involved" form)
+          or by corresponding with us by email or otherwise.
+        </li>
+        <li>
+          <strong>Automated technologies.</strong> As you interact with our
+          website, we may automatically collect Technical Data about your
+          equipment and browsing actions.
+        </li>
+      </ul>
+
+      <h2>How We Use Your Personal Data</h2>
+      <p>
+        We will only use your personal data when the law allows us to. Most
+        commonly, we will use your personal data in the following circumstances:
+      </p>
+      <ul>
+        <li>To register you as a new volunteer, partner, or event attendee.</li>
+        <li>
+          To process and deliver your event registration or process a donation.
+        </li>
+        <li>
+          To manage our relationship with you, including notifying you about
+          changes to our terms or privacy policy.
+        </li>
+        <li>
+          To administer and protect our organization and this website (including
+          troubleshooting and data analysis).
+        </li>
+        <li>
+          To send you communications about our programs, such as
+          <em>SittingWithTheMeds</em> or the <em>True Alignment Conference</em>,
+          if you have opted in.
+        </li>
+      </ul>
+
+      <h2>Data Security</h2>
+      <p>
+        We have put in place appropriate security measures to prevent your
+        personal data from being accidentally lost, used or accessed in an
+        unauthorized way, altered, or disclosed.
+      </p>
+
+      <h2>Changes to the Privacy Policy</h2>
+      <p>
+        We keep our privacy policy under regular review. It is important that
+        the personal data we hold about you is accurate and current. Please keep
+        us informed if your personal data changes during your relationship with
+        us.
+      </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-logo">
+            <img src="./assets/Rock&Root-white.svg" alt="Rock & Root Logo" />
+          </a>
+          <p>
+            God's agent for the Gospel of Jesus Christ — restoring families,
+            healing hearts, and propagating the love of God one life at a time.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Organization</h5>
+          <a href="./index.html#about">Our Mandate</a>
+          <a href="./index.html#vision-section">Our Theology</a>
+          <a href="./index.html#programs">Programs</a>
+          <a href="./index.html#conveners">Meet the Conveners</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms & Conditions</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:dare.med@brillareinc.com">dare.med@brillareinc.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span
+          >© <span id="current-year"></span> Rock & Root Initiative. All rights
+          reserved.</span
+        >
+      </div>
+    </footer>
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

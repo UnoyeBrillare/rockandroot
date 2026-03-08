@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms & Conditions | Rock & Root Initiative</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/Rock&Root-white.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #f7f3ec;
+        --warm-white: #fdfaf5;
+        --earth: #8b6f47;
+        --forest: #2e4a3a;
+        --gold: #c4963a;
+        --charcoal: #2a2520;
+        --text: #3a322a;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Jost", sans-serif;
+        background: var(--warm-white);
+        color: var(--text);
+        line-height: 1.8;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 18px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(253, 250, 245, 0.98);
+        border-bottom: 1px solid rgba(139, 111, 71, 0.15);
+      }
+
+      .nav-logo img {
+        height: 40px;
+        width: 100px;
+        object-fit: contain;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 36px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .nav-links a:hover {
+        color: var(--forest);
+      }
+
+      /* ── CONTENT ── */
+      .legal-header {
+        background: var(--forest);
+        padding: 160px 24px 80px;
+        text-align: center;
+      }
+
+      .legal-header h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        color: var(--cream);
+        margin-bottom: 16px;
+      }
+
+      .legal-header p {
+        color: var(--gold);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      .legal-content {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 0 24px;
+      }
+
+      .legal-content h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2rem;
+        color: var(--forest);
+        margin: 40px 0 16px;
+      }
+
+      .legal-content h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        color: var(--charcoal);
+        margin: 30px 0 12px;
+      }
+
+      .legal-content p {
+        margin-bottom: 16px;
+        color: rgba(58, 50, 42, 0.85);
+      }
+
+      .legal-content ul {
+        margin-bottom: 24px;
+        padding-left: 24px;
+      }
+
+      .legal-content li {
+        margin-bottom: 8px;
+        color: rgba(58, 50, 42, 0.85);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--charcoal);
+        color: var(--cream);
+        padding: 80px 60px 40px;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 60px;
+        border-bottom: 1px solid rgba(196, 150, 58, 0.15);
+        padding-bottom: 60px;
+      }
+
+      .footer-brand p {
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(200, 192, 181, 0.7);
+        max-width: 320px;
+      }
+
+      .footer-logo img {
+        height: 72px;
+        width: 120px;
+        margin-bottom: 16px;
+        object-fit: contain;
+      }
+
+      .footer-col h5 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.2rem;
+        color: var(--gold);
+        margin-bottom: 24px;
+      }
+
+      .footer-col a {
+        display: block;
+        color: rgba(200, 192, 181, 0.7);
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+
+      .footer-col a:hover {
+        color: var(--cream);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: rgba(200, 192, 181, 0.5);
+        letter-spacing: 0.05em;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 16px 24px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="./index.html" class="nav-logo">
+        <img src="./assets/Rock&Root.svg" alt="Rock & Root Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html#about">About</a></li>
+        <li><a href="./index.html#programs">Programs</a></li>
+        <li><a href="./index.html#events">Events</a></li>
+        <li><a href="./index.html#resources">Resources</a></li>
+        <li>
+          <a href="./index.html#get-involved" class="nav-cta">Get Involved</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="legal-header">
+      <h1>Terms & Conditions</h1>
+      <p>Our rules of Engagement</p>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="legal-content">
+      <h2>
+        Please read these terms and conditions carefully before using this site
+      </h2>
+      <p>These terms tell you the rules for using our website (our site).</p>
+
+      <h3>Who we are and how to contact us</h3>
+      <p>This site is operated by Rock & Root Initiative.</p>
+      <p>
+        To contact us, please email <strong>dare.med@brillareinc.com</strong> or
+        use the contact forms available on our website.
+      </p>
+
+      <h2>By using our site you accept these terms</h2>
+      <p>
+        By using our site, you confirm that you accept these terms of use and
+        that you agree to comply with them. If you do not agree to these terms,
+        you must not use our site.
+      </p>
+
+      <h2>There are other terms that may apply to you</h2>
+      <p>
+        These terms of use refer to the following additional terms, which also
+        apply to your use of our site:
+      </p>
+      <ul>
+        <li>
+          Our <a href="./privacy-policy.html">Privacy Policy</a>, which sets out
+          the terms on which we process any personal data we collect from you,
+          or that you provide to us.
+        </li>
+      </ul>
+
+      <h2>We may make changes to these terms</h2>
+      <p>
+        We amend these terms from time to time. Every time you wish to use our
+        site, please check these terms to ensure you understand the terms that
+        apply at that time.
+      </p>
+
+      <h2>We may make changes to our site</h2>
+      <p>
+        We may update and change our site from time to time to reflect changes
+        to our programs, our users’ needs and our organization’s priorities.
+      </p>
+
+      <h2>We may suspend or withdraw our site</h2>
+      <p>Our site is made available free of charge.</p>
+      <p>
+        We do not guarantee that our site, or any content on it, will always be
+        available or be uninterrupted. We may suspend or withdraw or restrict
+        the availability of all or any part of our site for business and
+        operational reasons. We will try to give you reasonable notice of any
+        suspension or withdrawal.
+      </p>
+
+      <h2>How you may use material on our site</h2>
+      <p>
+        We are the owner or the licensee of all intellectual property rights in
+        our site, and in the material published on it (including teachings,
+        videos, event branding, and articles). Those works are protected by
+        copyright laws and treaties around the world. All such rights are
+        reserved.
+      </p>
+      <p>
+        You may print off one copy, and may download extracts, of any page(s)
+        from our site for your personal use and you may draw the attention of
+        others within your organization to content posted on our site.
+      </p>
+      <p>
+        Our status (and that of any identified contributors) as the authors of
+        content on our site must always be acknowledged.
+      </p>
+      <p>
+        You must not use any part of the content on our site for commercial
+        purposes without obtaining a license to do so from us or our licensors.
+      </p>
+
+      <h2>Do not rely on information on this site</h2>
+      <p>
+        The content on our site is provided for general spiritual encouragement
+        and informational purposes only. It is not intended to amount to
+        professional advice (such as licensed legal, medical, or psychological
+        advice) on which you should rely.
+      </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-logo">
+            <img src="./assets/Rock&Root-white.svg" alt="Rock & Root Logo" />
+          </a>
+          <p>
+            God's agent for the Gospel of Jesus Christ — restoring families,
+            healing hearts, and propagating the love of God one life at a time.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Organization</h5>
+          <a href="./index.html#about">Our Mandate</a>
+          <a href="./index.html#vision-section">Our Theology</a>
+          <a href="./index.html#programs">Programs</a>
+          <a href="./index.html#conveners">Meet the Conveners</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms & Conditions</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:dare.med@brillareinc.com">dare.med@brillareinc.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span
+          >© <span id="current-year"></span> Rock & Root Initiative. All rights
+          reserved.</span
+        >
+      </div>
+    </footer>
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
