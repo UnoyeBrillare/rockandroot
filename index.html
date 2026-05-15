@@ -957,6 +957,39 @@
         }
       }
 
+      /* ── CONVENERS SECTION ── */
+      #conveners {
+        padding: 100px 60px;
+      }
+
+      .conveners-grid {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 64px;
+        align-items: start;
+        margin-top: 56px;
+        max-width: 1100px;
+      }
+
+      .bio-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      @media (max-width: 900px) {
+        #conveners {
+          padding: 70px 28px;
+        }
+        .conveners-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .bio-cards-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       /* ── ANIMATIONS ── */
       @keyframes fadeUp {
         from {
@@ -1202,6 +1235,327 @@
 
       .btn-submit:hover {
         background: var(--forest-light);
+      }
+
+      /* ── CONFERENCE PROMO MODAL ── */
+      .conf-promo {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 998;
+        width: 380px;
+        max-width: calc(100vw - 40px);
+        background: #111820;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        border-radius: 4px;
+        box-shadow:
+          0 24px 80px rgba(0, 0, 0, 0.45),
+          0 0 0 1px rgba(201, 168, 76, 0.06),
+          inset 0 1px 0 rgba(201, 168, 76, 0.08);
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(24px) scale(0.97);
+        transition:
+          opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+          visibility 0.5s,
+          transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .conf-promo.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+      }
+
+      .conf-promo.dismissing {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(16px) scale(0.96);
+        transition:
+          opacity 0.35s ease,
+          visibility 0.35s,
+          transform 0.35s ease;
+      }
+
+      /* Grain overlay */
+      .conf-promo::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+        opacity: 0.35;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Subtle radial glow */
+      .conf-promo::after {
+        content: "";
+        position: absolute;
+        top: -40%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200%;
+        height: 100%;
+        background: radial-gradient(
+          ellipse 50% 40% at 50% 0%,
+          rgba(201, 168, 76, 0.07) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Top gold line accent */
+      .conf-promo-accent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent 5%,
+          #c9a84c 30%,
+          #e2c97e 50%,
+          #c9a84c 70%,
+          transparent 95%
+        );
+        opacity: 0.7;
+        z-index: 1;
+      }
+
+      .conf-promo-inner {
+        position: relative;
+        z-index: 1;
+        padding: 28px 24px 24px;
+        text-align: center;
+      }
+
+      .conf-promo-close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        z-index: 2;
+        background: none;
+        border: none;
+        color: rgba(168, 176, 188, 0.5);
+        font-size: 18px;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transition:
+          color 0.2s,
+          background 0.2s;
+      }
+
+      .conf-promo-close:hover {
+        color: #f8f6f0;
+        background: rgba(201, 168, 76, 0.12);
+      }
+
+      .conf-promo-logo {
+        height: 52px;
+        width: auto;
+        margin-bottom: 16px;
+        filter: drop-shadow(0 0 12px rgba(201, 168, 76, 0.2));
+      }
+
+      .conf-promo-pretitle {
+        font-family: "Jost", sans-serif;
+        font-weight: 200;
+        font-size: 9px;
+        letter-spacing: 0.45em;
+        text-transform: uppercase;
+        color: #c9a84c;
+        margin-bottom: 10px;
+      }
+
+      .conf-promo-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1;
+        color: #f8f6f0;
+        margin-bottom: 4px;
+        letter-spacing: 0.02em;
+      }
+
+      .conf-promo-title-stroke {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1;
+        color: transparent;
+        -webkit-text-stroke: 0.8px #c9a84c;
+        letter-spacing: 0.02em;
+        margin-bottom: 6px;
+      }
+
+      .conf-promo-subtitle {
+        font-family: "Jost", sans-serif;
+        font-weight: 300;
+        font-size: 10px;
+        letter-spacing: 0.35em;
+        color: #a8b0bc;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+
+      .conf-promo-theme {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid rgba(201, 168, 76, 0.25);
+        padding: 5px 16px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 300;
+        color: #e2c97e;
+        letter-spacing: 0.04em;
+        margin-bottom: 16px;
+      }
+
+      .conf-promo-theme::before,
+      .conf-promo-theme::after {
+        content: "";
+        width: 12px;
+        height: 1px;
+        background: #c9a84c;
+        opacity: 0.5;
+      }
+
+      .conf-promo-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .conf-promo-meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+      }
+
+      .conf-promo-meta-label {
+        font-size: 8px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: #a8b0bc;
+        font-weight: 400;
+      }
+
+      .conf-promo-meta-value {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 13px;
+        color: #f8f6f0;
+        letter-spacing: 0.04em;
+      }
+
+      .conf-promo-meta-div {
+        width: 1px;
+        height: 24px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(201, 168, 76, 0.4),
+          transparent
+        );
+      }
+
+      .conf-promo-cta {
+        display: inline-block;
+        width: 100%;
+        background: linear-gradient(135deg, #c9a84c, #a8832a);
+        color: #111820;
+        font-family: "Jost", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        padding: 13px 28px;
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .conf-promo-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: white;
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+
+      .conf-promo-cta:hover::before {
+        opacity: 0.12;
+      }
+
+      .conf-promo-cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 28px rgba(201, 168, 76, 0.3);
+      }
+
+      .conf-promo-link {
+        display: block;
+        margin-top: 10px;
+        font-family: "Jost", sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        color: #a8b0bc;
+        text-decoration: none;
+        letter-spacing: 0.06em;
+        transition: color 0.2s;
+      }
+
+      .conf-promo-link:hover {
+        color: #e2c97e;
+      }
+
+      @media (max-width: 480px) {
+        .conf-promo {
+          bottom: 16px;
+          right: 16px;
+          left: 16px;
+          width: auto;
+          max-width: none;
+        }
+
+        .conf-promo-inner {
+          padding: 24px 20px 20px;
+        }
+
+        .conf-promo-title,
+        .conf-promo-title-stroke {
+          font-size: 24px;
+        }
+
+        footer {
+          padding: 48px 24px 32px;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .footer-brand p {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
@@ -2132,10 +2486,7 @@
     </section>
 
     <!-- CONVENERS -->
-    <section
-      id="conveners"
-      style="background: var(--charcoal); padding: 100px 60px"
-    >
+    <section id="conveners" style="background: var(--charcoal)">
       <p class="section-label" style="color: var(--gold)">The Conveners</p>
       <h2 class="section-title" style="color: var(--cream)">
         Dare &amp; <em style="color: var(--gold-light)">Titi Med</em>
@@ -2148,16 +2499,7 @@
         passionate about strengthening families through the truth of the Gospel.
       </p>
 
-      <div
-        style="
-          display: grid;
-          grid-template-columns: 360px 1fr;
-          gap: 64px;
-          align-items: start;
-          margin-top: 56px;
-          max-width: 1100px;
-        "
-      >
+      <div class="conveners-grid">
         <!-- Photo -->
         <div>
           <div
@@ -2165,6 +2507,7 @@
               position: relative;
               overflow: hidden;
               aspect-ratio: 3/4;
+              max-height: 600px;
               border: 1px solid rgba(196, 150, 58, 0.3);
             "
           >
@@ -2271,7 +2614,7 @@
           </div>
 
           <!-- Two bio cards -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+          <div class="bio-cards-grid">
             <div
               style="
                 background: rgba(255, 255, 255, 0.04);
@@ -2497,6 +2840,57 @@
       </div>
     </div>
 
+    <!-- CONFERENCE PROMO MODAL -->
+    <div class="conf-promo" id="confPromo">
+      <div class="conf-promo-accent"></div>
+      <button
+        class="conf-promo-close"
+        id="confPromoClose"
+        type="button"
+        aria-label="Close conference promo"
+      >
+        &times;
+      </button>
+      <div class="conf-promo-inner">
+        <img
+          class="conf-promo-logo"
+          src="./assets/True Alignment conference.svg"
+          alt="True Alignment Conference"
+        />
+        <p class="conf-promo-pretitle">Rock &amp; Root Initiative Presents</p>
+        <div class="conf-promo-title">THE TRUE</div>
+        <div class="conf-promo-title-stroke">ALIGNMENT</div>
+        <p class="conf-promo-subtitle">Conference &nbsp;·&nbsp; 2026</p>
+        <div class="conf-promo-theme">Wholesomeness</div>
+        <div class="conf-promo-meta">
+          <div class="conf-promo-meta-item">
+            <span class="conf-promo-meta-label">Date</span>
+            <span class="conf-promo-meta-value">May 30, 2026</span>
+          </div>
+          <div class="conf-promo-meta-div"></div>
+          <div class="conf-promo-meta-item">
+            <span class="conf-promo-meta-label">Location</span>
+            <span class="conf-promo-meta-value">Mississauga, ON</span>
+          </div>
+          <div class="conf-promo-meta-div"></div>
+          <div class="conf-promo-meta-item">
+            <span class="conf-promo-meta-label">Country</span>
+            <span class="conf-promo-meta-value">Canada</span>
+          </div>
+        </div>
+        <a
+          href="https://www.eventbrite.com/e/the-true-north-conference-2026-tickets-1986747251511?aff=oddtdtcreator"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="conf-promo-cta"
+          >Register Now</a
+        >
+        <a href="./true-alignment-conference.html" class="conf-promo-link"
+          >Learn more about the conference →</a
+        >
+      </div>
+    </div>
+
     <!-- FOOTER -->
     <footer>
       <div class="footer-top">
@@ -2673,6 +3067,26 @@
             submitBtn.disabled = false;
           });
       }
+
+      // Conference Promo Modal
+      (function () {
+        const promo = document.getElementById("confPromo");
+        const closeBtn = document.getElementById("confPromoClose");
+        const STORAGE_KEY = "confPromoDismissed";
+
+        if (sessionStorage.getItem(STORAGE_KEY)) return;
+
+        // Show after a short delay for a polished entrance
+        setTimeout(() => {
+          promo.classList.add("visible");
+        }, 600);
+
+        closeBtn.addEventListener("click", () => {
+          promo.classList.add("dismissing");
+          promo.classList.remove("visible");
+          sessionStorage.setItem(STORAGE_KEY, "1");
+        });
+      })();
     </script>
   </body>
 </html>
