@@ -1805,6 +1805,117 @@
         opacity: 1;
         transform: none;
       }
+
+      /* ── SESSIONS & TESTIMONIES GRID (Commented out) ──
+      .sessions-section {
+        padding: 80px 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .sessions-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .session-card {
+        background: linear-gradient(135deg, #18212c, #1f2b39);
+        border: 1px solid rgba(201, 168, 76, 0.14);
+        border-bottom: 3px solid var(--gold);
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .session-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(201, 168, 76, 0.3);
+      }
+      .session-thumb-link {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        display: block;
+        text-decoration: none;
+      }
+      .session-thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+      .session-thumb-link:hover .session-thumb {
+        transform: scale(1.05);
+      }
+      .session-play-btn {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background: rgba(17, 24, 32, 0.4);
+        transition: background 0.3s ease;
+      }
+      .session-thumb-link:hover .session-play-btn {
+        background: rgba(17, 24, 32, 0.2);
+      }
+      .session-play-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(17, 24, 32, 0.7);
+        border: 1px solid rgba(245, 237, 211, 0.25);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .session-thumb-link:hover .session-play-icon {
+        transform: scale(1.1);
+        background: var(--gold);
+        border-color: var(--gold-light);
+      }
+      .session-thumb-link:hover .session-play-icon svg path {
+        fill: var(--dark) !important;
+      }
+      .session-info {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .session-card-title {
+        font-family: "Cinzel", serif;
+        font-size: 20px;
+        line-height: 1.3;
+        color: var(--white);
+        margin-bottom: 12px;
+      }
+      .session-card-desc {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--silver-light);
+        font-weight: 300;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+      .session-card-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: auto;
+      }
+      */
     </style>
   </head>
   <body>
@@ -2205,6 +2316,62 @@
       <p class="scripture-ref">Colossians 1:10 — Anchor Scripture</p>
     </div>
 
+    <!-- SESSIONS & TESTIMONIES -->
+    <section class="video-section reveal" id="sessions">
+      <p class="section-eyebrow" style="text-align: center">
+        Watch the Conference
+      </p>
+      <h2 class="section-title" style="text-align: center; margin-bottom: 40px">
+        Sessions &amp; <span style="color: var(--gold-light)">Testimonies</span>
+      </h2>
+      <div class="video-card">
+        <div class="video-copy">
+          <div class="video-title">Wholeness After Trauma</div>
+          <p>
+            An inspiring testimony of healing and restoration. Maureen Oluwatobi
+            shares how she leaned on the grace of Christ to find healing,
+            restoration, and renewed purpose after trauma.
+          </p>
+          <div class="video-actions">
+            <a
+              href="https://www.youtube.com/watch?v=imDSWw9OFZU"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cta-btn"
+              >Watch on YouTube</a
+            >
+          </div>
+        </div>
+        <a
+          class="video-thumb-link"
+          href="https://www.youtube.com/watch?v=imDSWw9OFZU"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch Wholeness After Trauma: A Rape Survivor’s Story on YouTube"
+        >
+          <img
+            class="video-thumb"
+            src="https://img.youtube.com/vi/imDSWw9OFZU/hqdefault.jpg"
+            alt="Wholeness After Trauma: A Rape Survivor’s Story video thumbnail"
+            onerror="this.style.display = 'none'"
+          />
+          <div class="video-play">
+            <div class="video-play-badge" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 7.5L16 12L9 16.5V7.5Z" fill="#E2C97E" />
+              </svg>
+            </div>
+          </div>
+          <div class="video-caption">
+            <div>
+              <span class="vc-label">Testimony</span>
+              <span class="vc-title">True Alignment Conference</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <!-- ABOUT -->
     <section class="section reveal">
       <p class="section-eyebrow">About the Conference</p>
@@ -2443,13 +2610,13 @@
               class="cta-btn"
               >Watch on YouTube</a
             >
-            <a
+            <!-- <a
               href="https://www.youtube.com/watch?v=fisJIszDpIQ"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-outline"
               >Open Video</a
-            >
+            > -->
           </div>
         </div>
         <a
@@ -2501,13 +2668,13 @@
               class="cta-btn"
               >Watch on YouTube</a
             >
-            <a
+            <!-- <a
               href="https://www.youtube.com/watch?v=BNdGpjJ8VjQ"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-outline"
               >Open Video</a
-            >
+            > -->
           </div>
         </div>
         <a
@@ -2977,7 +3144,13 @@
             next chapter of Rock &amp; Root."
           </p>
           <div class="feedback-btn">
-            <a href="https://forms.gle/eHtY1zdwsH3iRfaC6" class="btn-outline" target="_blank" rel="noopener">Share Event Feedback</a>
+            <a
+              href="https://forms.gle/eHtY1zdwsH3iRfaC6"
+              class="btn-outline"
+              target="_blank"
+              rel="noopener"
+              >Share Event Feedback</a
+            >
           </div>
         </div>
       </div>
