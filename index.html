@@ -522,6 +522,12 @@
         justify-content: center;
       }
 
+      .program-icon img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+
       .program-card h3 {
         font-family: "Cormorant Garamond", serif;
         font-size: 1.5rem;
@@ -622,6 +628,14 @@
         font-size: 2.5rem;
         position: relative;
         overflow: hidden;
+      }
+
+      .resource-thumb img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        position: relative;
+        z-index: 1;
       }
 
       .resource-thumb::after {
@@ -774,9 +788,15 @@
 
       .involved-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 28px;
         margin-top: 60px;
+      }
+
+      @media (max-width: 1350px) and (min-width: 901px) {
+        .involved-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
 
       .involved-card {
@@ -795,6 +815,17 @@
       .involved-card .icon {
         font-size: 2.4rem;
         margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+      }
+
+      .involved-card .icon img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+        display: block;
       }
 
       .involved-card h3 {
@@ -2181,7 +2212,9 @@
       </p>
       <div class="programs-grid">
         <div class="program-card">
-          <div class="program-icon">🎙️</div>
+          <div class="program-icon">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f399-fe0f.png" alt="Podcast" />
+          </div>
           <h3>Sitting with the Meds</h3>
           <p>
             Our podcast — honest, grace-filled conversations about faith,
@@ -2192,7 +2225,9 @@
           </p>
         </div>
         <div class="program-card">
-          <div class="program-icon">🧭</div>
+          <div class="program-icon">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f9ed.png" alt="Coaching" />
+          </div>
           <h3>Coaching & Counselling</h3>
           <p>
             One-on-one and group sessions to help individuals navigate life's
@@ -2201,7 +2236,9 @@
           </p>
         </div>
         <div class="program-card">
-          <div class="program-icon">🌿</div>
+          <div class="program-icon">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f33f.png" alt="Therapy Recommendations" />
+          </div>
           <h3>Recommendations to Therapists</h3>
           <p>
             We connect people to trusted, professional therapeutic support —
@@ -2219,7 +2256,9 @@
             border-top: 2px solid var(--gold);
           "
         >
-          <div class="program-icon">✨</div>
+          <div class="program-icon">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/2728.png" alt="Conference" />
+          </div>
           <h3 style="color: var(--gold-light)">
             The True Alignment Conference ↗
           </h3>
@@ -2242,7 +2281,9 @@
           </p>
         </a>
         <div class="program-card">
-          <div class="program-icon">🙏</div>
+          <div class="program-icon">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f64f.png" alt="Prayer" />
+          </div>
           <h3>Prayer</h3>
           <p>
             Prayer is central to everything we do. We host regular prayer
@@ -2251,7 +2292,9 @@
           </p>
         </div>
         <div class="program-card">
-          <div class="program-icon">🤲</div>
+          <div class="program-icon">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f932.png" alt="Mentorship" />
+          </div>
           <h3>Mentorship</h3>
           <p>
             Pairing people with those who have walked further — intentional
@@ -2260,7 +2303,9 @@
           </p>
         </div>
         <div class="program-card">
-          <div class="program-icon">📖</div>
+          <div class="program-icon">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f4d6.png" alt="Bible Study" />
+          </div>
           <h3>Worship, Chat & Chill</h3>
           <p>
             Our Bible study — an open, welcoming space to dig into Scripture,
@@ -2292,7 +2337,9 @@
 
       <div class="tab-content active" id="tab-articles">
         <div class="resource-card">
-          <div class="resource-thumb">📖</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f4d6.png" alt="Article Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Article</div>
             <h4>God Made It Good — And He Will Restore It</h4>
@@ -2304,7 +2351,9 @@
           </div>
         </div>
         <div class="resource-card">
-          <div class="resource-thumb">🏠</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f3e0.png" alt="Family Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Article</div>
             <h4>Why the Family Is Ground Zero</h4>
@@ -2316,7 +2365,9 @@
           </div>
         </div>
         <div class="resource-card">
-          <div class="resource-thumb">🕊️</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f54a-fe0f.png" alt="Forgiveness Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Article</div>
             <h4>Unforgiveness, Betrayal & the Way Forward</h4>
@@ -2331,7 +2382,9 @@
 
       <div class="tab-content" id="tab-videos">
         <div class="resource-card">
-          <div class="resource-thumb">🎙️</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f399-fe0f.png" alt="Podcast Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Podcast — Sitting with the Meds</div>
             <h4>Episode 1: What Does It Mean to Be Healed?</h4>
@@ -2342,7 +2395,9 @@
           </div>
         </div>
         <div class="resource-card">
-          <div class="resource-thumb">✨</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/2728.png" alt="Recap Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Event Recap</div>
             <h4>True Alignment Conference Highlights</h4>
@@ -2353,7 +2408,9 @@
           </div>
         </div>
         <div class="resource-card">
-          <div class="resource-thumb">▶️</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/25b6-fe0f.png" alt="Video Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Video</div>
             <h4>Worship, Chat & Chill — Live Session</h4>
@@ -2367,7 +2424,9 @@
 
       <div class="tab-content" id="tab-teachings">
         <div class="resource-card">
-          <div class="resource-thumb">📜</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f4dc.png" alt="Series Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Teaching Series</div>
             <h4>Titus 2: Grace That Trains Us</h4>
@@ -2379,7 +2438,9 @@
           </div>
         </div>
         <div class="resource-card">
-          <div class="resource-thumb">🔥</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f525.png" alt="Teaching Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Teaching</div>
             <h4>The Gospel & the Family System</h4>
@@ -2391,7 +2452,9 @@
           </div>
         </div>
         <div class="resource-card">
-          <div class="resource-thumb">🌱</div>
+          <div class="resource-thumb">
+            <img src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f331.png" alt="Ministry Icon" />
+          </div>
           <div class="resource-body">
             <div class="resource-type">Teaching</div>
             <h4>Knowing God's Love in the Person of Christ</h4>
@@ -2749,7 +2812,34 @@
 
       <div class="involved-grid">
         <div class="involved-card">
-          <div class="icon">🙌</div>
+          <div class="icon">
+            <img
+              src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f9d1-200d-1f91d-200d-1f9d1.png"
+              alt="Join the Community"
+            />
+          </div>
+          <h3>Join the Community</h3>
+          <p>
+            Connect with like-minded individuals, share your journey, and grow
+            together. Be part of a space where faith and real life meet.
+          </p>
+          <a
+            href="#"
+            onclick="
+              openForm('community');
+              return false;
+            "
+            class="btn-gold"
+            >Join the Community</a
+          >
+        </div>
+        <div class="involved-card">
+          <div class="icon">
+            <img
+              src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f64c.png"
+              alt="Volunteer"
+            />
+          </div>
           <h3>Volunteer</h3>
           <p>
             Lend your gifts, your energy, and your presence. From event support
@@ -2767,7 +2857,12 @@
           >
         </div>
         <div class="involved-card">
-          <div class="icon">💛</div>
+          <div class="icon">
+            <img
+              src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f49b.png"
+              alt="Donate"
+            />
+          </div>
           <h3>Donate</h3>
           <p>
             Your generosity makes a difference. Every gift, no matter the size,
@@ -2787,7 +2882,12 @@
           >
         </div>
         <div class="involved-card">
-          <div class="icon">🤝</div>
+          <div class="icon">
+            <img
+              src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.0.1/img/apple/64/1f91d.png"
+              alt="Partner"
+            />
+          </div>
           <h3>Partner</h3>
           <p>
             Join us in advancing a mission that inspires hope, promotes
@@ -2820,6 +2920,7 @@
           <div class="form-group">
             <label for="interest">I would like to...</label>
             <select id="interest" class="form-control" required>
+              <option value="community">Join the Community</option>
               <option value="volunteer">Volunteer</option>
               <option value="donate">Donate</option>
               <option value="partner">Partner</option>
@@ -2845,7 +2946,7 @@
               placeholder="john@example.com"
             />
           </div>
-          <div class="form-group">
+          <div class="form-group" id="messageGroup">
             <label for="message">Message (Optional)</label>
             <textarea
               id="message"
@@ -3044,6 +3145,15 @@
 
       function openForm(type) {
         document.getElementById("interest").value = type;
+
+        // Hide message field if "Join the Community" is selected
+        const messageGroup = document.getElementById("messageGroup");
+        if (type === "community") {
+          messageGroup.style.display = "none";
+        } else {
+          messageGroup.style.display = "block";
+        }
+
         modal.classList.add("active");
         document.body.style.overflow = "hidden"; // Prevent background scrolling
       }
@@ -3052,6 +3162,18 @@
         modal.classList.remove("active");
         document.body.style.overflow = ""; // Re-enable scrolling
       }
+
+      // Dynamic message field visibility based on select dropdown changes
+      document
+        .getElementById("interest")
+        .addEventListener("change", function () {
+          const messageGroup = document.getElementById("messageGroup");
+          if (this.value === "community") {
+            messageGroup.style.display = "none";
+          } else {
+            messageGroup.style.display = "block";
+          }
+        });
 
       // Close modal on clicking outside
       modal.addEventListener("click", function (e) {
@@ -3069,6 +3191,9 @@
         submitBtn.textContent = "Submitting...";
         submitBtn.disabled = true;
 
+        const isCommunity =
+          document.getElementById("interest").value === "community";
+
         fetch("https://formsubmit.co/ajax/a5b7f7f242913eaa7f9424568ce64710", {
           method: "POST",
           headers: {
@@ -3080,7 +3205,9 @@
             Interest: document.getElementById("interest").value,
             Name: document.getElementById("fullName").value,
             Email: document.getElementById("emailAddress").value,
-            Message: document.getElementById("message").value,
+            Message: isCommunity
+              ? ""
+              : document.getElementById("message").value,
           }),
         })
           .then((response) => response.json())
@@ -3125,7 +3252,10 @@
       window.addEventListener("DOMContentLoaded", () => {
         const urlParams = new URLSearchParams(window.location.search);
         const openType = urlParams.get("open");
-        if (openType && ["volunteer", "donate", "partner"].includes(openType)) {
+        if (
+          openType &&
+          ["community", "volunteer", "donate", "partner"].includes(openType)
+        ) {
           openForm(openType);
         }
       });
