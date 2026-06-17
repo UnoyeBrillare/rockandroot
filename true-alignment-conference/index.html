@@ -1838,7 +1838,7 @@
         transform: none;
       }
 
-      /* ── SESSIONS & TESTIMONIES GRID (Commented out) ──
+      /* ── SESSIONS & TESTIMONIES GRID ── */
       .sessions-section {
         padding: 80px 24px;
         max-width: 1100px;
@@ -1861,7 +1861,7 @@
         flex-direction: column;
         max-width: 450px;
         width: 100%;
-        margin: 0 auto;
+        margin: 0;
         transition:
           transform 0.3s ease,
           border-color 0.3s ease;
@@ -1947,7 +1947,6 @@
         gap: 12px;
         margin-top: auto;
       }
-      */
     </style>
   </head>
   <body>
@@ -2349,58 +2348,108 @@
     </div>
 
     <!-- SESSIONS & TESTIMONIES -->
-    <section class="video-section reveal" id="sessions">
+    <section class="sessions-section reveal" id="sessions">
       <p class="section-eyebrow" style="text-align: center">
         Watch the Conference
       </p>
       <h2 class="section-title" style="text-align: center; margin-bottom: 40px">
         Sessions &amp; <span style="color: var(--gold-light)">Testimonies</span>
       </h2>
-      <div class="video-card">
-        <div class="video-copy">
-          <div class="video-title">Wholeness After Trauma</div>
-          <p>
-            An inspiring testimony of healing and restoration. Maureen Oluwatobi
-            shares how she leaned on the grace of Christ to find healing,
-            restoration, and renewed purpose after trauma.
-          </p>
-          <div class="video-actions">
-            <a
-              href="https://www.youtube.com/watch?v=imDSWw9OFZU"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cta-btn"
-              >Watch on YouTube</a
-            >
+
+      <div class="sessions-grid">
+        <!-- Session Card 1: True Alignment Conference 2026 -->
+        <div class="session-card">
+          <a
+            class="session-thumb-link"
+            href="https://www.youtube.com/watch?v=u8LJWwcHnh0"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch True Alignment Conference 2026 on YouTube"
+          >
+            <img
+              class="session-thumb"
+              src="https://img.youtube.com/vi/u8LJWwcHnh0/hqdefault.jpg"
+              alt="True Alignment Conference 2026 video thumbnail"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="session-play-btn">
+              <div class="session-play-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 7.5L16 12L9 16.5V7.5Z" fill="#E2C97E" />
+                </svg>
+              </div>
+            </div>
+          </a>
+          <div class="session-info">
+            <h3 class="session-card-title">
+              True Alignment Conference 2026
+            </h3>
+            <p class="session-card-desc">
+              A powerful, life-giving experience focused on wholesomeness. Hear from experienced therapists, recovery experts, counsellors, and ministers of the gospel—all coming together to reset and guide you into a more whole, aligned life.
+            </p>
+            <div class="session-card-actions">
+              <a
+                href="https://www.youtube.com/watch?v=u8LJWwcHnh0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn"
+                style="
+                  padding: 12px 24px;
+                  font-size: 10px;
+                  letter-spacing: 0.2em;
+                "
+                >Watch on YouTube</a
+              >
+            </div>
           </div>
         </div>
-        <a
-          class="video-thumb-link"
-          href="https://www.youtube.com/watch?v=imDSWw9OFZU"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Watch Wholeness After Trauma: A Rape Survivor’s Story on YouTube"
-        >
-          <img
-            class="video-thumb"
-            src="https://img.youtube.com/vi/imDSWw9OFZU/hqdefault.jpg"
-            alt="Wholeness After Trauma: A Rape Survivor’s Story video thumbnail"
-            onerror="this.style.display = 'none'"
-          />
-          <div class="video-play">
-            <div class="video-play-badge" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 7.5L16 12L9 16.5V7.5Z" fill="#E2C97E" />
-              </svg>
+
+        <!-- Session Card 2: Wholeness After Trauma -->
+        <div class="session-card">
+          <a
+            class="session-thumb-link"
+            href="https://www.youtube.com/watch?v=imDSWw9OFZU"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch Wholeness After Trauma on YouTube"
+          >
+            <img
+              class="session-thumb"
+              src="https://img.youtube.com/vi/imDSWw9OFZU/hqdefault.jpg"
+              alt="Wholeness After Trauma video thumbnail"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="session-play-btn">
+              <div class="session-play-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 7.5L16 12L9 16.5V7.5Z" fill="#E2C97E" />
+                </svg>
+              </div>
+            </div>
+          </a>
+          <div class="session-info">
+            <h3 class="session-card-title">
+              Wholeness After Trauma
+            </h3>
+            <p class="session-card-desc">
+              An inspiring testimony of healing and restoration. Maureen Oluwatobi shares how she leaned on the grace of Christ to find healing, restoration, and renewed purpose after trauma.
+            </p>
+            <div class="session-card-actions">
+              <a
+                href="https://www.youtube.com/watch?v=imDSWw9OFZU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn"
+                style="
+                  padding: 12px 24px;
+                  font-size: 10px;
+                  letter-spacing: 0.2em;
+                "
+                >Watch on YouTube</a
+              >
             </div>
           </div>
-          <div class="video-caption">
-            <div>
-              <span class="vc-label">Testimony</span>
-              <span class="vc-title">True Alignment Conference</span>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
     </section>
 
