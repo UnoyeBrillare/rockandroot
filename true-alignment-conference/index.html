@@ -41,6 +41,23 @@
         overflow-x: hidden;
       }
 
+      /* Rock & Root home link, sits above the conference logo in the hero */
+      .brand-link {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 28px;
+        animation: fadeUp 1s 0.1s ease both;
+      }
+      .brand-link img {
+        height: 30px;
+        width: auto;
+        opacity: 0.85;
+        transition: opacity 0.2s;
+      }
+      .brand-link:hover img {
+        opacity: 1;
+      }
+
       /* ── HERO ── */
       .hero {
         min-height: 100vh;
@@ -1990,6 +2007,16 @@
       <div class="hero-ring ring3"></div>
 
       <div class="hero-content">
+        <a
+          href="../"
+          class="brand-link"
+          aria-label="Rock & Root Initiative — back to home"
+        >
+          <img
+            src="../assets/Rock&Root-white.svg"
+            alt="Rock &amp; Root Initiative"
+          />
+        </a>
         <div class="logo-wrap">
           <img
             src="../assets/True Alignment conference.svg"
