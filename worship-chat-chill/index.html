@@ -155,6 +155,99 @@
         color: var(--amber);
       }
 
+      /* ---------- COUNTDOWN ---------- */
+      .countdown {
+        background: var(--night-deep);
+        color: var(--cream);
+        text-align: center;
+        padding: 56px 16px 60px;
+        position: relative;
+        overflow: hidden;
+      }
+      .countdown::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 70% 100% at 50% 50%,
+          rgba(228, 166, 90, 0.08),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .countdown-label {
+        position: relative;
+        font-size: 0.72rem;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        color: var(--amber);
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+      .countdown-grid {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+      .countdown-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 110px;
+      }
+      .countdown-num {
+        font-family: "Fraunces", serif;
+        font-weight: 400;
+        font-size: clamp(3rem, 9vw, 5.6rem);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        font-variant-numeric: tabular-nums;
+        background: linear-gradient(
+          180deg,
+          var(--cream) 40%,
+          rgba(243, 203, 138, 0.6) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        transition: transform 0.15s ease;
+      }
+      .countdown-num.tick {
+        transform: scale(1.06);
+      }
+      .countdown-unit-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(246, 239, 227, 0.55);
+        margin-top: 10px;
+        font-weight: 500;
+      }
+      .countdown-sep {
+        font-family: "Fraunces", serif;
+        font-size: clamp(2.2rem, 6vw, 4rem);
+        color: var(--amber);
+        opacity: 0.45;
+        line-height: 1;
+        padding-top: 6px;
+      }
+      .countdown-date-line {
+        position: relative;
+        font-family: "Fraunces", serif;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: rgba(246, 239, 227, 0.72);
+      }
+      .countdown-done {
+        font-family: "Fraunces", serif;
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+        color: var(--amber-bright);
+      }
+
       /* ---------- DETAIL STRIP ---------- */
       .details {
         background: var(--cream-soft);
@@ -414,6 +507,12 @@
         }
       }
       @media (max-width: 720px) {
+        .countdown-unit {
+          min-width: 64px;
+        }
+        .countdown-sep {
+          display: none;
+        }
         .detail-grid {
           grid-template-columns: 1fr;
         }
@@ -464,7 +563,7 @@
           What does an <em>ideal</em> Christian experience look like?
         </h1>
         <p class="subhead">
-          An open, unhurried evening in the Word — bring your questions, your
+          An open, unhurried afternoon in the Word — bring your questions, your
           doubts, and your hunger. No polish required, just honest conversation
           and the warmth of community.
         </p>
@@ -476,6 +575,35 @@
       </div>
     </header>
 
+    <!-- COUNTDOWN -->
+    <section class="countdown">
+      <p class="countdown-label">Time Remaining Until We Gather</p>
+      <div class="countdown-grid" id="countdown">
+        <div class="countdown-unit">
+          <div class="countdown-num" id="cd-days">00</div>
+          <div class="countdown-unit-label">Days</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-num" id="cd-hours">00</div>
+          <div class="countdown-unit-label">Hours</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-num" id="cd-minutes">00</div>
+          <div class="countdown-unit-label">Minutes</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-num" id="cd-seconds">00</div>
+          <div class="countdown-unit-label">Seconds</div>
+        </div>
+      </div>
+      <p class="countdown-date-line">
+        Saturday, November 7, 2026 &nbsp;·&nbsp; Ottawa, Ontario
+      </p>
+    </section>
+
     <!-- DETAILS -->
     <section class="details">
       <div class="wrap">
@@ -483,13 +611,13 @@
           <div class="detail">
             <div class="label">When</div>
             <div class="value">
-              Late October<small class="tbd">Exact date to be confirmed</small>
+              November 7<small>Saturday · 2026</small>
             </div>
           </div>
           <div class="detail">
             <div class="label">Time</div>
             <div class="value">
-              6:30 PM<small>Doors open · come as you are</small>
+              3:30 – 6 PM<small>Doors open · come as you are</small>
             </div>
           </div>
           <div class="detail">
@@ -505,7 +633,7 @@
     <!-- BODY -->
     <section class="body-sec">
       <div class="wrap">
-        <p class="kicker reveal">About the Evening</p>
+        <p class="kicker reveal">About the Afternoon</p>
         <h2 class="reveal">
           A real question, held <em>honestly</em>, in good company.
         </h2>
@@ -583,15 +711,17 @@
     <!-- INVITE -->
     <section class="invite">
       <div class="wrap">
-        <h2 class="reveal">Come and <em>sit with us</em> this October.</h2>
+        <h2 class="reveal">Come and <em>sit with us</em> this November.</h2>
         <p class="reveal">
           Bring a friend. Bring your questions. There's room at the table for
           whoever you are and wherever you're coming from.
         </p>
         <a
           class="cta reveal"
-          href="mailto:home@rockandroot.org?subject=Worship%2C%20Chat%20%26%20Chill%20—%20October%20Bible%20Study"
-          >Save my seat</a
+          href="https://www.eventbrite.com/e/worship-chat-chill-ottawa-2026-tickets-2001272863006?aff=oddtdtcreator"
+          target="_blank"
+          rel="noopener"
+          >Register on Eventbrite</a
         >
         <p class="note reveal">Questions? Email home@rockandroot.org</p>
       </div>
@@ -629,6 +759,35 @@
         { threshold: 0.15 },
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Countdown timer — Nov 7, 2026, 3:30 PM Ottawa time (EST, UTC−5)
+      const eventDate = new Date("2026-11-07T15:30:00-05:00");
+      const pad = (n) => String(n).padStart(2, "0");
+      function updateCountdown() {
+        const diff = eventDate - new Date();
+        if (diff <= 0) {
+          document.getElementById("countdown").innerHTML =
+            '<p class="countdown-done">We\'re gathered — see you there!</p>';
+          clearInterval(countdownTimer);
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        const secEl = document.getElementById("cd-seconds");
+        secEl.classList.remove("tick");
+        void secEl.offsetWidth;
+        secEl.classList.add("tick");
+
+        document.getElementById("cd-days").textContent = pad(days);
+        document.getElementById("cd-hours").textContent = pad(hours);
+        document.getElementById("cd-minutes").textContent = pad(minutes);
+        secEl.textContent = pad(seconds);
+      }
+      const countdownTimer = setInterval(updateCountdown, 1000);
+      updateCountdown();
     </script>
   </body>
 </html>
